@@ -68,7 +68,7 @@ const MembersFormStepper: FunctionComponent<MembersFormProps> = ({
 
   const handleInitiateAction = () => {
     const data: CreatePaymentPayload = {
-      member_id: userId,
+      member_id: userId.toString(),
     };
     const action = reduxAddPayment;
 
