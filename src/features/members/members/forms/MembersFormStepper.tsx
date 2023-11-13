@@ -66,28 +66,28 @@ const MembersFormStepper: FunctionComponent<MembersFormProps> = ({
     setInitiateDialogOpen(false);
   };
 
-  const handleInitiateAction = () => {
-    const data: CreatePaymentPayload = {
-      member_id: userId,
-    };
-    const action = reduxAddPayment;
+  // const handleInitiateAction = () => {
+  //   const data: CreatePaymentPayload = {
+  //     member_id: userId,
+  //   };
+  //   const action = reduxAddPayment;
 
-    return dispatch(
-      action({
-        ...data,
-      })
-    ).then((payload) => {
-      if (isRejected(payload)) {
-        if (isRejectedWithValue(payload)) {
-          console.log("FORM ERRORS", payload);
-        }
-      } //else replace(accessUrls.groupListCreate());
-    });
+  //   return dispatch(
+  //     action({
+  //       ...data,
+  //     })
+  //   ).then((payload) => {
+  //     if (isRejected(payload)) {
+  //       if (isRejectedWithValue(payload)) {
+  //         console.log("FORM ERRORS", payload);
+  //       }
+  //     } //else replace(accessUrls.groupListCreate());
+  //   });
 
-    //console.log("Initiating action for user with ID:", selectedUserId);
+  //   //console.log("Initiating action for user with ID:", selectedUserId);
 
-    handleCloseInitiateDialog();
-  };
+  //   handleCloseInitiateDialog();
+  // };
   //==========================
 
   const schema = useMemo(() => {
@@ -433,12 +433,12 @@ const MembersFormStepper: FunctionComponent<MembersFormProps> = ({
           </LoadingButton>
         </Stack>
       </FormProvider>
-      <InitiateRegDialog
+      {/* <InitiateRegDialog
         open={initiateDialogOpen}
         onClose={handleCloseInitiateDialog}
         onInitiate={handleInitiateAction}
         userId={userId}
-      />
+      /> */}
     </>
   );
 };
