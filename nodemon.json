@@ -1,0 +1,6 @@
+{
+  "watch": ["translations/namespaces"],
+  "ext": "ts,json",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "yarn build:translations"
+}

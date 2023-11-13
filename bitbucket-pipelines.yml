@@ -1,0 +1,22 @@
+image: node:18
+
+pipelines:
+  default:
+    - step:
+          name: Deploy to Development Server 🚀
+          # trigger: manual
+          deployment: Development
+          script:
+
+            - if [[ $BITBUCKET_BRANCH != dev ]]; then echo "This Job can only be performed on dev branch. 😞" && exit 1; fi
+            - echo "Copying app to the Server..."
+            - scp -o StrictHostKeyChecking=no -r . bitbucket@176.58.110.189:/home/bitbucket/docker-apps-staging/mycoin-pwa
+            - echo "Successfully Copied App to the Server"
+            # - ls -la
+            # - echo "Go to APP directory"
+            # - cd /home/bitbucket/docker-apps-staging/mycoin-pwa
+            # - yarn install
+            # - echo "Successfully Installed App dependencies!"
+            # - yarn run dev
+            # - echo "App Started Successfully!"
+            # - echo "Successfully Deployed Application"

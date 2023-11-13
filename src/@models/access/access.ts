@@ -1,0 +1,1 @@
+export type SessionPermissionsResponse = string[];

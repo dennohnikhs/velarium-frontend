@@ -1,0 +1,1 @@
+{"title":"Usuários","columns":{"name":"Nome","username":"Nome de usuário","email":"E-mail","status":"Status"},"addUser":"Criar usuário","dialog":{"add_title":"Criar usuário","update_title":"Atualizar usuário","update_button":"Atualizar","submit_button":"Enviar","fields":{"firstname":"Primeiro nome","lastname":"Sobrenome","email":"E-mail"}}}
