@@ -67,7 +67,7 @@ export type EmploymentPayload = {
   monthly_income: string;
 };
 export type CreatePaymentPayload = {
-  member_id: string; 
+  member_id: string | number;
 };
 
 ////
