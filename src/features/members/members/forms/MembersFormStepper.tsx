@@ -66,30 +66,6 @@ const MembersFormStepper: FunctionComponent<MembersFormProps> = ({
     setInitiateDialogOpen(false);
   };
 
-  // const handleInitiateAction = () => {
-  //   const data: CreatePaymentPayload = {
-  //     member_id: userId,
-  //   };
-  //   const action = reduxAddPayment;
-
-  //   return dispatch(
-  //     action({
-  //       ...data,
-  //     })
-  //   ).then((payload) => {
-  //     if (isRejected(payload)) {
-  //       if (isRejectedWithValue(payload)) {
-  //         console.log("FORM ERRORS", payload);
-  //       }
-  //     } //else replace(accessUrls.groupListCreate());
-  //   });
-
-  //   //console.log("Initiating action for user with ID:", selectedUserId);
-
-  //   handleCloseInitiateDialog();
-  // };
-  //==========================
-
   const schema = useMemo(() => {
     const shape = steps.reduce((prev, current, index) => {
       if (index <= activeStep)
